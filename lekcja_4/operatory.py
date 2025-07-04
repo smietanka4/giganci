@@ -2,8 +2,8 @@
 
 # print(250 > 42) # 250 większe od 42 (True)
 # print(400 >= 300) # 400 większe bądź równe 300 (True)
-# print(250 < 250) # 250 większe od 250 (False)
-# print(250 <= 250) # 250 jest większe bądź równe 250 (True)
+# print(250 < 250) # 250 mniejsze od 250 (False)
+# print(250 <= 250) # 250 jest mniejsze bądź równe 250 (True)
 # print(24 == 12) # 24 równa się 12 (False)
 # print(40 != 20) # 40 jest różne od 20 (True)
 
