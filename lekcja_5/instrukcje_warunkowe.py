@@ -92,11 +92,85 @@ else:
     print("Żaden z warunków nie został spełniony")
 
 # Zadanie 3
+
 '''
 Jaką liczbę całkowitą wprowadzono: pozytywną, negatywną, czy równą zero?
 Liczba może przyjąć tylko jedną z podanych opcji. 
 Idealne wykorzystanie instrukcji if-elif.
 '''
+
+liczba = int(input("Wprowadź liczbę: "))
+if liczba == 0:
+    print("Liczba jest równa zero")
+elif liczba > 0:
+    print("Liczba ma pozytywną wartość")
+# elif liczba < 0:
+#     print("Liczba ma negatywną wartość") -> Można lepiej i szybciej
+else:
+    print("Liczba ma negatywną wartość")
+
+# Zadanie 4
+
+'''
+1. Program poprosi użytkownika o podanie pierwszej liczby
+2. Następnie wyświetli możliwe działania matematyczne, które można wykonać:
+    a. ‘+’ → dodawanie
+    b. - → odejmowanie
+    c. * → mnożenie
+    d. / → dzielenie
+3. Użytkownik wpisuje znak wybranego działania.
+4. Program poprosi o drugą liczbę
+5. Na końcu program wyświetla wynik obliczenia
+'''
+
+liczba1 = float(input("Podaj pierwszą liczbę: "))
+
+# print("+ -> dodawanie")
+# print("- -> odejmowanie")
+# print("* -> mnożenie")
+# print("/ -> dzielenie")
+# dzialanie = input("Wybierz docelowe działanie matematyczne: ")
+
+dzialanie = input("Dodawanie -> + \nOdejmowanie -> -\nMnożenie -> *\nDzielenie -> /\nWybierz docelowe działanie matematyczne")
+
+liczba2 = float(input("Podaj drugą liczbę: "))
+
+if dzialanie == "+":
+    # liczba1 += liczba2
+    # print(f"Wynikiem dodawania jest {liczba1}")
+
+    # print(liczba1+liczba2)
+    wynik = liczba1 + liczba2
+elif dzialanie == "-":
+    wynik = liczba1 - liczba2
+elif dzialanie == "*":
+    wynik = liczba1 * liczba2
+elif dzialanie == "/":
+    if liczba2 == 0:
+        print("Nie wolno dzielić przez zero")
+        wynik = "Error"
+    else: 
+        wynik = liczba1 / liczba2
+else:
+    print("Wprowadzono niepoprawny symbol")
+    wynik = "Error"
+
+print(f"{liczba1} {dzialanie} {liczba2} = {wynik}")
+
+    
+        
+         
+
+
+
+
+
+
+
+
+
+
+
 
 
 
