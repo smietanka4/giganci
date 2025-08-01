@@ -1,0 +1,28 @@
+1) Utwórz listę zawierającą 5 dowolnych liczb całkowitych. 
+Oblicz sumę drugiego i czwartego elementu tej listy i zapisz wynik do zmiennej suma.
+
+Przykład wejścia:
+liczby = [3, 7, 2, 9, 4]
+
+2) Dla danej listy liczb całkowitych, utwórz nową listę zawierającą tylko liczby parzyste.
+
+Przykład wejścia:
+liczby = [1, 4, 5, 8, 11, 12]
+
+3) Wczytuj kolejne elementy z listy, aż napotkasz liczbę ujemną. 
+Zlicz, ile liczb zostało przetworzonych przed jej napotkaniem.
+
+Przykład wejścia:
+liczby = [2, 5, 3, 0, -1, 7]
+
+Oczekiwany wynik:
+4 -> 2,5,3,0
+
+4) Dla danej listy imion, wypisz każde imię wraz z jego indeksem w formacie: 0: Ania, 1: Tomek, itd.
+
+Przykład wejścia:
+imiona = ["Ania", "Tomek", "Kasia"]
+
+Oczekiwany wynik:
+0: Ania, 1: Tomek, 2: "Kasia"
+
