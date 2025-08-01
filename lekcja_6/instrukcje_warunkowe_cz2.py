@@ -132,12 +132,15 @@ Napisz program, który wczyta od użytkownika długości trzech boków trójkąt
         ➤ ostrokątny - wszystkie kąty < 90°
 '''
 
+# Długości boków będą zmiennymi a, b, c
 a = float(input("Podaj pierwszy bok trójkąta: "))
 b = float(input("Podaj drugi bok trójkąta: "))
 c = float(input("Podaj trzeci bok trójkąta: "))
 
+# Podsumowanie:
 print(f"Podano boki: {a}, {b}, {c}")
 
+# Zmienne wymagane do więcej niż jednej części
 najkrotszy = min(a,b,c)
 najdluzszy = max(a,b,c)
 obwod = a + b + c
@@ -148,7 +151,64 @@ if (a > 0 and b > 0 and c > 0) and  (najdluzszy > najkrotszy + sredni):
     print("Taki trójkąt istnieje")
 else:
     print("Podane boki nie utworzą trójkąta")
-    exit()
+    exit() # Wcześniejsze zakończenie programu
+
+# Część numer 1: Najkrótszy i najdłuższy bok
+print(f"Najkrótszy bok: {najkrotszy}")
+print(f"Najdłuższy bok: {najdluzszy}")
+
+# Część numer 2: Rodzaj trójkąta boki
+# Równoboczny - wszystkie boki są takie same
+# Różnoboczny - wszystkie boki są różne
+# Równoramienny - dwa boki takie same (pozostałe przypadki)
+if a == b == c: # Równoboczny
+    print("Trójkąt równoboczny")
+elif a!=b and a!=c and b!=c: # Różnoboczny
+    print("Trójkąt różnoboczny")
+else: # Równoramienny
+    print("Trójkąt równoramienny")
+
+# Część numer 3: Obwód
+print(f"Obwód trójkąta: {obwod}")
+
+# Część numer 4: Rodzaj trójkąta kąty
+# Twierdzenie pitagorasa:
+# najdluzszy^2 ?? sredni_bok^2 + najkrotszy^2
+# prostokątny: == obie wartosci sa sobie rowne
+# rozwartokątny: > kwadrat najdłuższego boku jest większy
+# ostrokątny: < suma kwadratów dwóch boków jest większa
+
+kwadrat_najdluzszego_boku = najdluzszy ** 2
+suma_kwadratow_dwoch_bokow = sredni ** 2 + najkrotszy ** 2
+if kwadrat_najdluzszego_boku == suma_kwadratow_dwoch_bokow:
+    print("Trójkąt prostokątny")
+elif kwadrat_najdluzszego_boku > suma_kwadratow_dwoch_bokow:
+    print("Trójkąt rozwartokątny")
+else:
+    print("Trójkąt ostrokątny")
+
+# ZADANIE 5 - średnia ocen
+'''
+Napisz program, który wczyta od użytkownika oceny końcowe z pięciu
+przedmiotów: matematyka, polski, angielski, informatyka, wf. Następnie wyliczy
+średnią ocen i wyświetli komunikat czy otrzymamy pasek na świadectwie
+'''
+print("Podaj oceny końcowe z następujących przedmiotów: ")
+ocena_matma = float(input("Matematyka: "))
+ocena_polski = float(input("Język Polski: "))
+ocena_angielski = float(input("Angielski: "))
+ocena_informatyka = float(input("Informatyka: "))
+ocena_wf = float(input("WF: "))
+
+suma_ocen = ocena_matma + ocena_polski + ocena_angielski + ocena_informatyka + ocena_wf
+srednia_ocen = suma_ocen / 5
+
+if srednia_ocen >= 4.75:
+    print("Gratulacje, otrzymasz pasek na świadectwie!")
+else:
+    print("Niestety nie otrzymasz paska na świadectwie.")
+    print("Powodzenia w przyszłym roku!")
+print("Twoja średnia to:", srednia_ocen)
 
 
 

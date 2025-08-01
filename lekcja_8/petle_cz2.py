@@ -83,3 +83,15 @@ for a in range(1, 11):
     pass # for a 
 
 
+# Else dla pętli - informacja dodatkowa
+
+value = int(input("Podaj liczbę: "))
+
+for a in range(value):
+    print(f"a = {a}")
+    if a > 4:
+        break
+    pass # for a
+else:
+    print("Pętla wykonała się bez instrukcji break")
+    pass # else
