@@ -26,3 +26,15 @@ imiona = ["Ania", "Tomek", "Kasia"]
 Oczekiwany wynik:
 0: Ania, 1: Tomek, 2: "Kasia"
 
+5) Dana jest macierz (lista list) liczb całkowitych. 
+Oblicz sumę wszystkich elementów znajdujących się na przekątnej głównej tej macierzy.
+
+Podpowiedź: Przekątna główna to elementy, które mają równe indeksy wierszy i kolumn 
+(np. macierz[0][0], macierz[1][1], itd.).
+
+macierz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
