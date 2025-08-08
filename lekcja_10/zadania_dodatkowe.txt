@@ -1,0 +1,24 @@
+1) Napisz funkcję dodaj(a, b), która przyjmuje dwie liczby i wypisuje ich sumę.
+
+2) Napisz funkcję czy_parzysta(liczba), która sprawdza, czy liczba jest parzysta. Wypisz odpowiedni komunikat:
+
+"Liczba jest parzysta"
+
+"Liczba jest nieparzysta"
+
+3) Napisz funkcję powtorz_tekst(tekst, ile_razy), która wypisze podany tekst określoną liczbę razy.
+
+4) Napisz funkcję pole_kola(promien), która obliczy i wypisze pole koła.
+    Wzór: π * r^2, użyj math.pi z biblioteki math.
+
+5) Napisz funkcję kalkulator(a, b, dzialanie), która:
+
+dodaje, jeśli dzialanie to "+"
+
+odejmuje, jeśli "-"
+
+mnoży, jeśli "*"
+
+dzieli, jeśli "/"
+
+6) Napisz funkcję odwroc_tekst(tekst), która wypisze podany tekst wspak.
