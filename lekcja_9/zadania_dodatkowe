@@ -38,3 +38,11 @@ macierz = [
     [7, 8, 9]
 ]
 
+6) Zadanie - dwie wersje: z wykorzystaniem ASCII lub funkcji
+Odwracanie wielkości liter w przekazanym napisie. Napisz program, który wczytuje
+napis od użytkownika, a następnie zamienia małe litery na duże, a duże na małe. Znaki
+specjalne nie są zmieniane.
+ASCII: Warto sprawdzić sobie tablicę ASCII. Dla uproszczenia rozważamy tylko
+angielskie znaki: bez ‘ą’, ‘ę’, itd. Do odczytania numeru ASCII danego znaku należy
+użyć funkcji ord(znak). Do zamiany liczby ASCII w znak użyj chr(liczba).
+Bez ASCII: Wykorzystać funkcje: isupper(), islower(), lower(), upper()
