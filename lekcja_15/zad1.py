@@ -31,5 +31,7 @@ def binarna(a):
 
       return wynik
 
+
+
 wynik = binarna(41)
 print(wynik)
