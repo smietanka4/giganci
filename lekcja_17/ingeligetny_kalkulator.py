@@ -36,8 +36,8 @@ def oblicz(liczba1, liczba2, operacja):
     elif operacja == "/":
         return liczba1/liczba2
 
-def oblicz_z_tekstu(tekst):
-    wynik = 0 
+def oblicz_z_tekstu(tekst):                                          
+    wynik = 0 # przechowuje wynik obliczeń.
     liczba = ''
     operacja = ''
 
