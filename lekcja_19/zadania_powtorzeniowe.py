@@ -36,3 +36,35 @@ for liczba in lista:
 print(lista) 
 print(f"Największa liczba to {najwieksza}")
 print(f"Najmniejsza liczba to {najmniejsza}")
+
+# Zadanie 4
+
+'''
+Program ma zliczyć ile danych liter znajduje się w zdaniu
+Przykładowe wyświetlanie:
+
+ABC przykładowy tekst na potrzeby naszego programu
+Slowa: 7 Litery: 44 ilość liter: {'a': 5, 'b': 2, 'c': 1, 'p': 3, 'r': 4, 'z': 3, 'y': 3,
+'k': 2, 'l': 1, 'd': 1, 'o': 4, 'w': 1, 't': 3, 'e': 3, 's': 2, 'n': 2, 'g': 2, 'm': 1, 'u': 1}
+'''
+
+tekst = input("Podaj przykładowy tekst: ")
+print(tekst)
+
+slownik = {}
+slowa = 1
+litery = 0
+
+for znak in tekst:
+      znak = znak.lower()
+      if znak == " ":
+            slowa += 1
+      else:
+            litery += 1
+            if znak in slownik:
+                  slownik[znak] += 1
+            else:
+                  slownik[znak] = 1
+
+print(f"Słowa: {slowa}, Litery: {litery}, ilość liter: {slownik}")
+

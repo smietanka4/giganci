@@ -58,12 +58,14 @@ print(wynik, wynik2)
 slownik = {}
 print(type(slownik))
 
-slownik = {'key': 'value'}
+slownik = {'key': 'value'} # klucze nie mogą się powtarzać, wartości tak, i do jednego klucza moze byc przypisanych wiele wartosci
+print(slownik)
 
-slownik = {'k': 1, 'm': [1,1,3], 'l': 'sigma'}
+slownik = {'a': 1, 'b': 5, 'c':  6}
 
-if 'k' in slownik:
-      slownik['k'] += 2
-      
-print(slownik['k'])
+slownik['a'] += 1
+
+print(slownik)
+
+
       
