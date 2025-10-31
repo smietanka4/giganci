@@ -1,4 +1,4 @@
-from uzytkownik import Uzytkownik
+from klasy import Uzytkownik
 
 user1 = Uzytkownik()
 user1.imie = "Jan"
@@ -9,7 +9,6 @@ user2 = Uzytkownik()
 user2.imie = "Adam"
 user2.nazwisko = "Nowak"
 user2.wiek = 12
-
 
 user3 = Uzytkownik()
 user3.imie = "Piotr"
@@ -22,3 +21,5 @@ user3.info()
 
 user1.zmien_wiek(19)
 user1.info()
+
+

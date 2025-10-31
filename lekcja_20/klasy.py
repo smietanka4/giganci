@@ -36,3 +36,11 @@ class Przedmiot():
     def dodaj_ocene(self, ocena):
         self.oceny.append(ocena)
         self.srednia = sum(self.oceny) / len(self.oceny)
+
+    def wyswietl_oceny(self):
+        print("Lista ocen: ", self.oceny)
+
+    def wyswietl_srednia(self):
+        print(f"Średnia: {self.srednia}")
+
+    
