@@ -68,18 +68,17 @@ def wstaw_duzy_strit(pole):
         punkty[pole-1] = 0
  
 def wstaw_maly_strit(pole):
-    kosci_bez_powtorzen = list(set(kosci))
-    kosci_bez_powtorzen.sort()
+    kosci.sort()
     dlugosc_strita = 0
-    for i in range(len(kosci_bez_powtorzen)-1,0, -1):
-        if kosci_bez_powtorzen[i] == kosci_bez_powtorzen[i-1] + 1:
+    for i in range(1,5):
+        if kosci[i-1] == kosci[i] - 1:
             dlugosc_strita += 1
-            if dlugosc_strita == 3:
-                punkty[pole-1] = 30
-                return
         else:
             dlugosc_strita = 0
-    punkty[pole-1] = 0
+    if dlugosc_strita == 3:
+        punkty[pole-1] = 30
+    else:
+        punkty[pole-1] = 0
  
 def wstaw_general(pole):
     lista_wystapien = [0,0,0,0,0,0]
