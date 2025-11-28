@@ -41,5 +41,5 @@ class Oczy(Element):
             super().__init__("eye")
 
 class Bron(Element):
-      def __init(self):
+      def __init__(self):
             super().__init__("weapon")
