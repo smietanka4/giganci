@@ -16,7 +16,7 @@ class Element():
 
             # używamy pętli żeby wczytać wszystkie obrazy z folderu
             for i in range(1,4):
-                  sciezka = f'lekcja_24/images/{typ}{i}.png'
+                  sciezka = f'lekcja_24_25/images/{typ}{i}.png'
                   wczytany_obraz = Obraz(sciezka)
                   self.lista_obrazow.append(wczytany_obraz)
 

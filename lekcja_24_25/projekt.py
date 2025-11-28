@@ -1,4 +1,7 @@
+# dodanie modułu pygame
 import pygame
+# zaimportowanie stworzonego pliku Element.py
+import Element
 
 pygame.init()
 
@@ -7,12 +10,18 @@ SZEROKOSC_EKRANU = 800
 WYSOKOSC_EKRANU = 600
 
 # wczytanie obrazów do zmiennych
-obraz_tla = pygame.image.load('lekcja_24\images/background.png')
-obraz_bazy_postaci = pygame.image.load("lekcja_24\images/base.png")
+obraz_tla = pygame.image.load('lekcja_24_25\images/background.png')
+obraz_bazy_postaci = pygame.image.load("lekcja_24_25\images/base.png")
 
 # utworzenie obiektów ekranu oraz FPS
 ekran = pygame.display.set_mode([SZEROKOSC_EKRANU, WYSOKOSC_EKRANU])
 zegar = pygame.time.Clock()
+
+# elementy stroju
+nakrycie_glowy = Element.NakrycieGlowy()
+ubranie_element = Element.Stroj()
+oczy_element = Element.Oczy()
+bron_element = Element.Bron()
 
 # główna pętla gry
 gra_dziala = True
