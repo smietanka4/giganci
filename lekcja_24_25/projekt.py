@@ -70,7 +70,7 @@ while gra_dziala:
 
       # zapisywanie
       if zapisywanie:
-            pygame.image.save(ekran, f'postac_{id}.png')
+            pygame.image.save(ekran, f'lekcja_24_25/postac_{id}.png')
             id += 1
             zapisywanie = False
 
