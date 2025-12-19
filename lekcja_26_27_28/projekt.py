@@ -13,7 +13,7 @@ tlo = pygame.Surface((SZEROKOSC_EKRANU, WYSOKOSC_EKRANU))
 
 for i in range(25):
       for j in range(19):
-            obraz = pygame.image.load("lekcja_26_27/images/background.png")
+            obraz = pygame.image.load("lekcja_26_27_28/images/background.png")
             maska = (random.randrange(0,20), random.randrange(0,20), random.randrange(0,20))
 
             obraz.fill(maska, special_flags=pygame.BLEND_ADD)
@@ -39,7 +39,6 @@ gra_dziala = True
 while gra_dziala:
       # obsługa zdarzeń
       for event in pygame.event.get():
-            print(event)
             if event.type == pygame.KEYDOWN:
                   if event.key == pygame.K_ESCAPE:
                         gra_dziala = False
@@ -58,7 +57,15 @@ while gra_dziala:
             elif event.type == pygame.QUIT:
                   gra_dziala = False
 
+      kolizja_z_jablkiem = pygame.sprite.spritecollideany(waz, jablka)
+      if kolizja_z_jablkiem != None:
+            kolizja_z_jablkiem.kill()
+            waz.jedz_jablko()
+            jablko = Jablko()
+            jablka.add(jablko)
+
       ekran.blit(tlo, (0,0))
+      waz.dodaj_segmenty(ekran)
       ekran.blit(waz.glowa, waz.rect)
 
       for jablko in jablka:

@@ -1,6 +1,5 @@
 import pygame
 import random
-import sys
 
 # --- 1. INICJALIZACJA I USTAWIENIA ---
 pygame.init() # "Budzik" - bez tego moduły pygame'a nie zadziałają
@@ -10,7 +9,7 @@ WYSOKOSC_EKRANU = 608
 ekran = pygame.display.set_mode([SZEROKOSC_EKRANU, WYSOKOSC_EKRANU]) # Tworzenie okna gry pygame
 pygame.display.set_caption("Sciagawka") # Ustawianie wyświetlanego tytułu u góry okna
 
-# Kolory (RGB)
+# Kolory (R,G,B)
 BIALY = (255, 255, 255)
 CZARNY = (0, 0, 0)
 
