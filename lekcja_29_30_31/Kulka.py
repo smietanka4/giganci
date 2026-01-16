@@ -23,13 +23,13 @@ class Kulka(pygame.sprite.Sprite):
             self.przegrana = False
 
       # aktualizacja kulki
-      def aktualizuj(self, platforma):
+      def aktualizuj(self, platforma, klocki):
             self.wspolrzedne += self.wektor_kulki
             self.rect.center = self.wspolrzedne
-            self.sprawdz_kolizje(platforma)
+            self.sprawdz_kolizje(platforma, klocki)
 
       # sprawdzanie wszystkich kolizji
-      def sprawdz_kolizje(self, platforma):
+      def sprawdz_kolizje(self, platforma, klocki):
 
             # krawędzie ekranu
             if self.rect.x <= 0:
@@ -47,3 +47,25 @@ class Kulka(pygame.sprite.Sprite):
                   self.wektor_kulki.x *= platforma.porusza_sie*5
                   if self.wektor_kulki.x < -10: self.wektor_kulki.x = -10
                   if self.wektor_kulki.x > 10: self.wektor_kulki.x = 10
+
+            # kolizja z klockami
+            for klocek in klocki:
+                  # nastąpiła kolizja
+                  if self.kolizja_z_klockiem(self, klocek):
+                        klocek.uderzenie()
+                        break
+
+
+      def kolizja_z_klockiem(self, kulka, klocek):
+            dystans_x = abs(kulka.rect.centerx - klocek.rect.centerx) - klocek.rect.w / 2
+            dystans_y = abs(kulka.rect.centery - klocek.rect.centery) - klocek.rect.h / 2
+
+            if dystans_x < kulka.r and dystans_y < kulka.r:
+                  if dystans_x < dystans_y:
+                        self.wektor_kulki.y *= -1
+                  else:
+                        self.wektor_kulki.x *= -1
+                  return True
+            return False
+
+
