@@ -87,5 +87,16 @@ orzel1.wydajDzwiek()
 orzel1.poluj()
 orzel1.jedz()
 
+print("===== Zadanie dodatkowe =====")
+
+'''
+Dodajmy do zadania z poprzedniej lekcji(https://pastebin.com/JAeeQymq) klasę
+bazową Figura i umieśćmy w niej metody odpowiedzialne za wyświetlanie obwodu i
+pola:
+
+Następnie sprawmy aby Kolo i Prostokat dziedziczyły po tej klasie i usuńmy ich
+definicje metod. Utwórzmy jeszcze raz obiekty i sprawdźmy czy funkcje działają
+prawidłowo:
+'''
 
 
