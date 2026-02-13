@@ -103,4 +103,4 @@ def fibonacci(n):
 
 # result = {"numer indeksu": "liczba"}
 
-def fibonacci(n):
+# def fibonacci(n):
